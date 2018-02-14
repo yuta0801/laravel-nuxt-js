@@ -20,6 +20,7 @@ module.exports = (options = {}) => {
     options => _.merge(options, {
       mode: "spa",
       modules: [require.resolve("./module"), "@nuxtjs/axios"],
+      plugins: [require.resolve("./plugin")],
       axios: {
         proxy: process.env.LARAVEL_URL != null,
       },
